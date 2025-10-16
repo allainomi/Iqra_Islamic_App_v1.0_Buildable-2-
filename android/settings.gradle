@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = 'iqra_islamic_app'
