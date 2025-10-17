@@ -1,18 +1,18 @@
-buildscript {
-    ext {
-        buildToolsVersion = "33.0.0"
-        minSdkVersion = 21
-        compileSdkVersion = 33
-        targetSdkVersion = 33
-        kotlin_version = "1.8.0"
+android {
+    compileSdkVersion 33
+    // ... دیگر ترتیبات
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        // ... دیگر ترتیبات
     }
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:7.3.1")
-        classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+            // shrinkResources false  // اگر ضرورت ہو تو
+            // minifyEnabled false    // اگر ضرورت ہو تو
+        }
     }
 }
