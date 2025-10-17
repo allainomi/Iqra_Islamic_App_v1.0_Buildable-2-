@@ -4,11 +4,11 @@ buildscript {
         minSdkVersion = 21
         compileSdkVersion = 33
         targetSdkVersion = 33
-        // یہ لائن شامل کریں:
-        kotlin_version = "1.8.0" // یا تازہ ترین ورژن
-        
-        // اگر آپ React Native 0.71+ استعمال کر رہے ہیں:
-        // kotlinVersion = "1.8.0"
     }
-    // ... باقی کوڈ
+    // ... ڈیپنڈنسیز
+}
+
+// اگر یہ بلاک نہیں ہے تو شامل کریں:
+ext {
+    kotlin_version = "1.8.0"
 }
